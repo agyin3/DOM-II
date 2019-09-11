@@ -76,3 +76,11 @@ const logo = document.querySelector('h1');
 window.addEventListener('load', () => {
     logo.style.fontSize = '6.4rem';
 })
+
+// Copy Effect 
+
+paragraphs.forEach(p => {
+    p.addEventListener('copy', event => {
+        event.target.style.color = 'yellow';
+    })
+})
