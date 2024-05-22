@@ -84,3 +84,18 @@ paragraphs.forEach(p => {
         event.target.style.color = 'yellow';
     })
 })
+
+document.querySelectorAll("p").forEach(element => {
+    element.addEventListener('click', e => {
+        console.log(e.target.value)
+    })
+
+  element.addEventListener("select", event => {
+    let selection = event.target.substring(
+      event.target.selectionStart,
+      event.target.selectionEnd
+    );
+    console.log(selection);
+    selection.style.color = "green";
+  });
+});
