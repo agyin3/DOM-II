@@ -1,59 +1,49 @@
-# DOM II - Event Exploration
+# DOM II
+
+## Project Description
 
 Fun Bus wants you to make their site more interactive. They are relying on you to provide 10 unique events to enhance their site. Explore the many events available to you by using the [MDN events reference](https://developer.mozilla.org/en-US/docs/Web/Events).
 
-## Set Up The Project With Git
-
-**Follow these steps to set up and work on your project:**
+## Git Setup
 
 * [ ] Create a forked copy of this project.
-* [ ] Add your project manager as collaborator on Github.
-* [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-* [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: git push origin `<firstName-lastName>`.
+* [ ] Clone your OWN version of the repository.
+* [ ] Implement the project on the main branch, committing changes regularly.
+* [ ] Push commits: `git push origin main`.
 
-**Follow these steps for completing your project.**
+## Running the project
 
-* [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
-* [ ] Add your project manager as a reviewer on the pull-request
-* [ ] Your project manager will count the project as complete by merging the branch back into master.
+This project uses [Webpack and Babel](https://bloomtech-1.wistia.com/medias/bhi99dwr2x). Inside `src/index.html` you will notice there is no `script` tag linking the JavaScript, nor a `link` tag linking the styles. When the project starts, Webpack transcompiles the LESS into CSS, and injects the JavaScript and the styles into the HTML.
 
-## Task 1: Set Up LESS Preprocessor
+Do not **move or rename any files** in this project. The website's source files live inside the `src` folder. Do not make changes to any files outside of the `src` folder, unless it's new dependecies declared in the `package.json` due to installing NPM libraries (E.G. `npm i lodash`).
 
-* [ ] Verify that you have LESS installed correctly by running `lessc -v` in your terminal, if you don't get a version message back, reach out to your project manager for help.
+* [ ] Run `npm install` to download the project's dependencies.
+* [ ] Run `npm start` to launch the website on `http://localhost:3000`.
 
-* [ ] Open your terminal and navigate to your preprocessing project by using the `cd` command
+## MVP
 
-* [ ] Once in your project's root folder, run the following command `less-watch-compiler less css index.less`
+### Create listeners of 10 types of events
 
-* [ ] Verify your compiler is working correctly by changing the `background-color` on the `html` selector to `red` in your `index.less` file.
+* [ ] Using your [index.js file](src/index.js), create [event listeners](https://developer.mozilla.org/en-US/docs/Web/Events) of at least 10 _different_ types. You must Use your creativity to make the Fun Bus site more interactive. For example you could change colors, animate objects, add DOM elements, remove them, etc.
 
-* [ ] Once you see the red screen, you can delete that style and you're ready to start on the next task
+* [ ] Here are some event types you could try to use:
+  * [ ] `mouseover`
+  * [ ] `keydown`
+  * [ ] `wheel`
+  * [ ] `load`
+  * [ ] `focus`
+  * [ ] `resize`
+  * [ ] `scroll`
+  * [ ] `select`
+  * [ ] `dblclick`
+  * [ ] `drag / drop`
 
-## Task 2: Create Unique Event Listeners
+Note: Drag and drop is a bit more advanced than the others. It's not actually a single type of event but several types that need to work together.
 
-* [ ] Using your [index.js file](js/index.js), create 10 [unique event listeners](https://developer.mozilla.org/en-US/docs/Web/Events). using your creativity to make the Fun Bus site more interactive.  Here are some unique events you could try to use: 
-	* [ ] `mouseover`
-	* [ ] `keydown`
-	* [ ] `wheel`
-	* [ ] `drag / drop`
-	* [ ] `load`
-	* [ ] `focus`
-	* [ ] `resize`
-	* [ ] `scroll`
-	* [ ] `select`
-	* [ ] `dblclick`
+### Use preventDefault
 
-Using the 10 unique events, find ways to update the DOM in creative ways. For example you could change colors, animate objects, remove objects, etc.
+* [ ] Find a usecase for preventDefault. For example, you could prevent a link from navigating when clicked, or to navigate somewhere surprising.
 
-* [ ] Nest two similar events somewhere in the site and prevent the event propagation properly
-* [ ] Stop the navigation from items from refreshing the page by using `preventDefault()`
+## Submission Format
 
-## Stretch Task:
-
-* [ ] Go look at [GSAP](https://greensock.com/) and implement the animations found in that library with your custom events.
-
-## Stretch assignment
-
-* [ ] Take a look at the [stretch assignment](stretch-assignment) and follow the instructions in the read me file.
+* [ ] Submit project using Codegrade, as per the instructions in the learning platform.
